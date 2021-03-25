@@ -1,2 +1,11 @@
-# helloworld-nodejs
-A simple Node.js JavaScript application to use with the CloudBees Core Workshop
+pipeline {
+  agent any
+  stages {
+    stage('Say Hello') {
+      steps {
+        echo 'Hello World!'   
+        sh 'java -version'
+      }
+    }
+  }
+}
